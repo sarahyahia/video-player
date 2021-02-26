@@ -1,0 +1,59 @@
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/hover-min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">   
+    <link rel="stylesheet" href="css/BreakingBadEp1.css" />  
+    <script src="js/jquery.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script> 
+    <title>SOLO</title>
+    </head>
+<body >
+    <section>
+
+            <div  class="videoArea" onclick="toggle()" onmouseover="showControls()" onmouseout="hideControls()" >
+        
+        
+                <video class="video" id="myvideo" buffer preload="none" poster="https://i.imgur.com/85XpUgR.jpg">
+                    <source src="https://archive.org/download/got-2/SOLO.mp4" type="video/mp4">
+                </video>
+                <div class="subtitle" >
+                    <div id="subtitle" class="subtitleText" ></div>
+                </div>
+                <div id="overlay" class="overlay glyphicon glyphicon-play"></div>
+            
+                <div id="controls" class="controls" onclick="event.stopPropagation()">  
+                    <div id="progressBackground" class="progress progressBackground">
+                    <div id="progressValue" class="progress progressValue"></div></div>
+                    <hr/>
+                    <img onclick="play();" class="playerBtn" src="http://www.icons101.com/icons/8/Audio_Video_Outline_Icons_by_Daniele_De_Santis/128/play-icon.png" />
+                    <img onclick="stop();" class="playerBtn" src="http://www.icons101.com/icons/8/Audio_Video_Outline_Icons_by_Daniele_De_Santis/128/stop-icon.png" />
+                    <img onclick="pause();" class="playerBtn" src="http://www.icons101.com/icons/8/Audio_Video_Outline_Icons_by_Daniele_De_Santis/128/pause-icon.png" />
+                    <img onclick="moveBackward();" class="playerBtn" src="http://www.icons101.com/icons/8/Audio_Video_Outline_Icons_by_Daniele_De_Santis/128/rewind-icon.png" />
+                    <img onclick="moveForward();" class="playerBtn" src="http://www.icons101.com/icons/8/Audio_Video_Outline_Icons_by_Daniele_De_Santis/128/forward-icon.png" />                  
+                     <img onclick="loop();" id="loops" class="playerBtn" src="http://www.icons101.com/icons/8/Audio_Video_Outline_Icons_by_Daniele_De_Santis/128/replay-icon.png"/>    
+                     <a onclick="window.location.href='https://www.w3schools.com/tags/movie.mp4'"><img class="playerBtn" src="https://image.flaticon.com/icons/png/128/2820/2820253.png" /></a> 
+                <select id="videoSpeed" onchange="videoSpeedChanged()">
+                    <option value="0.5">0.5x</option>
+                    <option value="1" selected>1x</option>
+                    <option value="2">2x</option>
+                    <option value="4">4x</option>
+                </select>
+                <img onclick="mute();" id="mutes" class="playerBtn2" src="https://image.flaticon.com/icons/png/128/149/149136.png"/>        
+                <input id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+                <img onclick="fullScreen();" class="playerBtn" src="https://image.flaticon.com/icons/png/128/60/60694.png"/>
+            </div>
+              </div>
+              
+
+
+
+
+</section>
+
+
+   
+    <script src="js/main.js" ></script>
+</body>
+</html>
